@@ -21,9 +21,7 @@
   "packageManager": "pnpm@10.12.2",
   "files": [
     "index.js",
-    "index.d.ts"
-  ],
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
-  }
+    "index.d.ts",
+    "src/**/*"
+  ]
 }
