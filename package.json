@@ -23,5 +23,8 @@
     "index.js",
     "index.d.ts",
     "src/**/*"
-  ]
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  }
 }
