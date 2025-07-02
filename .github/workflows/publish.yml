@@ -46,24 +46,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
 
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v3
-        with:
-          version: 8
-          run_install: false
-
-      - name: Download build artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: dist
-          path: dist
-
-      - name: Verify npm auth
-        run: npm whoami
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-
       - name: Publish package
-        run: npm publish --no-git-checks
+        run: echo $NODE_AUTH_TOKEN
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
