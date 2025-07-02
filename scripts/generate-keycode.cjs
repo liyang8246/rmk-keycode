@@ -47,6 +47,11 @@ fs.readFile(rustFilePath, 'utf8', (err, data) => {
 
     tsContent += `}\n`;
 
+    const outputDir = path.dirname(tsFilePath);
+    if (!fs.existsSync(outputDir)) {
+        fs.mkdirSync(outputDir, { recursive: true });
+    }
+
     fs.writeFile(tsFilePath, tsContent, 'utf8', (err) => {
         if (err) {
             console.error('Error writing TypeScript file:', err);
