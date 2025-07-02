@@ -59,7 +59,7 @@ jobs:
           path: dist
 
       - name: Verify npm auth
-        run: npm whoami --registry=https://registry.npmjs.org/
+        run: npm whoami
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
