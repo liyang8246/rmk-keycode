@@ -46,6 +46,12 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
 
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build package
+        run: npm run build
+
       - name: Publish package
         run: npm publish --no-git-checks
         env:
