@@ -1,0 +1,13 @@
+{
+  "name": "rmk-keycode",
+  "version": "0.7.3",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "node scripts/postinstall.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.12.2"
+}
