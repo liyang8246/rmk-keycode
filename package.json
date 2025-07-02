@@ -4,15 +4,26 @@
   "description": "",
   "main": "index.js",
   "type": "module",
+  "types": "index.d.ts",
   "scripts": {
-    "postinstall": "node scripts/postinstall.cjs",
-    "build": "tsc"
+    "load-rmk": "node scripts/download-rmk.cjs",
+    "gen-keycode": "node scripts/generate-keycode.cjs",
+    "ts:build": "tsc",
+    "build": "run-s load-rmk gen-keycode ts:build"
   },
   "devDependencies": {
+    "npm-run-all": "^4.1.5",
     "typescript": "5.8.3"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "packageManager": "pnpm@10.12.2"
+  "packageManager": "pnpm@10.12.2",
+  "files": [
+    "index.js",
+    "index.d.ts"
+  ],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  }
 }
